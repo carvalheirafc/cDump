@@ -28,7 +28,7 @@ int** initialize_values(int **matrix_to_initialize,
             srand(time(NULL));
             for(int i = 0; i < row_size; i++){
                 for(int j = 0; j < column_size; j++){
-                    matrix_to_initialize[i][j] = rand() % 100;
+                    matrix_to_initialize[i][j] = rand() % 1000;
                 }
             }
         }else{
@@ -44,10 +44,10 @@ int** initialize_values(int **matrix_to_initialize,
 void print_array(int **matrix_to_print, int row_size, int column_size){
     for(int i = 0; i < row_size; i++){
         for(int j = 0; j < column_size; j++){
-            if(i == 0 || j == 0)
-                printf("%d ", matrix_to_print[i][j]);
+            if(j % row_size ==  0)
+                printf("%d", matrix_to_print[i][j]);
             else
-                printf(" %d ", matrix_to_print[i][j]);
+                printf("\t%d ", matrix_to_print[i][j]);
         }
         printf("\n");
     }
