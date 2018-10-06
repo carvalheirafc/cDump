@@ -6,6 +6,11 @@ void free_allocated_memory(int **matrix_to_free, int row_size, int column_size);
 
 int** initialize_values(int **matrix_to_initialize,
     int row_size, int column_size, int standard_value);
+
+void print_array(int **matrix_to_print, int row_size, int column_size);
+
+
+
 //Later Code
 /*
 struct genericType{

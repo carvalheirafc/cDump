@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <stdio.h>
 #include <time.h>
 #include "n-arrays-lib.h"
 
@@ -38,4 +39,16 @@ int** initialize_values(int **matrix_to_initialize,
             }
         }
     return matrix_to_initialize;
+}
+
+void print_array(int **matrix_to_print, int row_size, int column_size){
+    for(int i = 0; i < row_size; i++){
+        for(int j = 0; j < column_size; j++){
+            if(i == 0 || j == 0)
+                printf("%d ", matrix_to_print[i][j]);
+            else
+                printf(" %d ", matrix_to_print[i][j]);
+        }
+        printf("\n");
+    }
 }

@@ -15,6 +15,7 @@ int main(int argc, char **argv){
     dinamic_matrix_test = allocate_memory(dinamic_matrix_test, row_size, column_size);
     dinamic_matrix_test = initialize_values(dinamic_matrix_test, row_size, column_size, -1);
 
+    print_array(dinamic_matrix_test, row_size, column_size);
     free_allocated_memory(dinamic_matrix_test, row_size, column_size);
     }
 
